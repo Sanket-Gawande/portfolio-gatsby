@@ -59,9 +59,9 @@ const index = () => {
     ]
   return (
     <Layout>
-      <section className='flex flex-col'>
+      <section className='flex flex-col h-max'>
         {/* hero section */}
-        <section className='flex items-center flex-col md:flex-row p-6 md:p-20'>
+        <section className='flex items-center flex-col md:flex-row p-6 md:p-20 '>
           <div className='w-full md:w-1/2 py-8 space-y-6 order-2 md:order-1'>
             <a
               href='https://github.com/sanket-gawande'
@@ -125,7 +125,7 @@ const index = () => {
           </div>
         </section>
 
-        <div className='md:h-screen py-12 w-full border-t border-slate-700 md:border-none md:p-20'>
+        <div className='md:h-screen py-12 w-full border-t border-slate-700 md:border-none md:p-20 '>
           <section className='w-full md:text-center mx-auto space-y-4 p-8' >
             <h1 className='text-2xl md:text-[3rem] leading-snug font-bold'>
               I'm good with Javascript and its environment.
