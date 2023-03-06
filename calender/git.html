@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link href="./a.css" rel="stylesheet">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  
+</style>
+<body>
+
+  <h3 >
+    Patu the heart hacker
+  </h3>
+  <img src="./icon.png" alt="">
+  <img src="https://illustoon.com/photo/2557.png" />
+</body>
+<script>
+  const token = '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';
+  const query = `
+query($userName:String!) {
+  user(login: $userName){
+    contributionsCollection {
+      contributionCalendar {
+        totalContributions
+        weeks {
+          contributionDays {
+            contributionCount
+            date
+          }
+        }
+      }
+    }
+  }
+}
+`
+  async function getData() {
+    const req = await fetch('https://api.github.com/graphql', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({ query, variables: { userName: 'sanket-gawande' } })
+    })
+    const data = await req.json()
+    console.log(data)
+  }
+  // getData()
+</script>
+<!-- <script defer src="./a.js"></script> -->
+</html>

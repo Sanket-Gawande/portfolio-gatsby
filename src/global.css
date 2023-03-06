@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+
+@layer {
+ .btn-primary {
+  @apply py-2 md:py-3 px-4 md:px-6 bg-white glow-white-sm rounded-full text-slate-900 inline-block
+ }
+ .btn-ghost {
+  @apply py-2 md:py-3 px-4 md:px-6 border-[1.5px] rounded-full text-white
+ }
+}
+.glow-white-sm:hover {
+  box-shadow: 0 0 35px rgba(4, 142, 255, 0.3);
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background: rgba(59, 57, 81,.5);;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 2.5px;
+  background: #3B3951;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  border-radius: 1rem;
+}
+
+::selection {
+  color: #3B3951;
+  background: #fff;
+}
