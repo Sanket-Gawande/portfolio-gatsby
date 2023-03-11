@@ -3,9 +3,10 @@ import React from 'react'
 import { git, menu, zsh } from '../partials/icons'
 
 const Header: React.FC<{ headerOpen: boolean }> = ({ headerOpen }) => {
+  
   return (
     <header
-      className='py-5 w-full z-10  max-w-8xl backdrop-filter backdrop-blur-lg fixed'
+      className={`py-5 w-full z-10 transition-all duration-300  max-w-8xl ${headerOpen ? '' : 'backdrop-filter backdrop-blur-lg'} fixed md: backdrop-filter md:backdrop-blur-lg`}
     >
       <section className='md:w-10/12 flex justify-between mx-auto px-8 md:px-0'>
 
@@ -20,11 +21,11 @@ const Header: React.FC<{ headerOpen: boolean }> = ({ headerOpen }) => {
         <a href='https://github.com/sanket-gawande' target={'_blank'} className='fill-slate-300 text-slate-200 w-5 h-5 md:hidden'>
           {git}
         </a>
-        <div className={`md:hidden fixed inset-0 backdrop-filter backdrop-blur-lg z-10  bg-slate-900/50 blur-xl h-screen ${headerOpen ? 'opacity-100 visible' : 'opacity-0 invisible'} transition-all duration-300`}>
+        <div className={`fixed inset-0 z-10  bg-slate-900/60 h-screen ${headerOpen ? 'opacity-100 visible  backdrop-filter backdrop-blur-sm' : 'opacity-0 invisible'} transition-all duration-300 md:hidden`}>
 
         </div>
 
-        <nav className={`flex duration-300 transition-all md:space-x-5 font-normal text-slate-200 md:text-slate-400  md:items-center fixed md:relative  h-screen md:h-full top-0 left-0 flex-col md:flex-row bg-slate-800/20 md:bg-transparent backdrop-filter backdrop-blur-lg z-20 ${headerOpen ? 'w-10/12 px-6' : 'w-0 md:w-auto'} overflow-hidden pt-16 md:pt-0  space-y-4 md:space-y-0`}>
+        <div className={`flex duration-300 transition-all md:space-x-5 font-normal text-slate-200 md:text-slate-400  md:items-center fixed md:relative  h-screen md:h-full top-0 left-0 flex-col md:flex-row bg-slate-800/50 md:bg-transparent backdrop-filter backdrop-blur-lg z-20 ${headerOpen ? 'w-10/12 px-6' : 'w-0 md:w-auto'} overflow-hidden pt-16 md:pt-0  space-y-4 md:space-y-0`}>
 
           {
             [
@@ -66,7 +67,7 @@ const Header: React.FC<{ headerOpen: boolean }> = ({ headerOpen }) => {
               Start project?
             </span>
           </button>
-        </nav>
+        </div>
       </section>
     </header>
   )

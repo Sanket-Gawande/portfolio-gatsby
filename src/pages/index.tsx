@@ -93,30 +93,35 @@ const index = () => {
           </div>
           <div className="w-full relative md:w-1/2 p-4  sm:p-8 md:px-20 order-1 md:order-1">
 
-            <img src="https://sanket.vercel.app/profile.webp"
-              alt=""
-              className='w-full  p-4 object-cover rounded-tr-[5rem] rounded-tl-[6rem]  rounded-br-[6rem] rounded-bl-[7rem] overflow-hidden grayscale hover:grayscale-0 duration-300 ease-in-out'
+            <img src="/images/profile.webp"
+              alt="Sanket Gawande"
+              className='w-full  p-4 object-cover rounded-tr-[5rem] rounded-tl-[6rem]  rounded-br-[6rem] rounded-bl-[7rem] overflow-hidden grayscale hover:grayscale-[.5] duration-300 ease-in-out'
             />
             {/* floating icons */}
 
-            <img src="https://img.icons8.com/color/48/null/react-native.png"
+            <img
+              src="/images/react.webp"
               alt="react"
               className='absolute top-0 h-14 shadow-lg w-14 left-0 bg-slate-800 p-2 rounded-full'
             />
-            <img src="https://img.icons8.com/color/144/null/javascript--v1.png"
+            <img 
+              src="/images/javascript.webp"
               className='absolute top-5 h-16 shadow-lg w-16 left-8 bg-slate-800 p-2 rounded-full'
               alt='Javascript'
             />
-            <img src="https://img.icons8.com/color/144/null/nodejs.png"
+            <img
+              src="/images/nodejs.webp"
               className='absolute bottom-0 h-16 shadow-lg w-16 left-0 bg-slate-800 p-2 rounded-full'
               alt='Nodejs'
             />
-            <img src="https://img.icons8.com/color/144/null/mongodb.png"
-              className='absolute bottom-0 shadow-lg  h-8 w-8 right-0 bg-slate-800 p-2 rounded-full'
+            <img 
+            src="/images/mongodb.webp"
+              className='absolute bottom-0 shadow-lg  h-14 w-14 right-0 bg-slate-800 p-2 rounded-full'
               alt='mongodb'
             />
-            <img src="https://img.icons8.com/color/144/null/typescript.png"
-              className='absolute bottom-0 shadow-lg  h-8 w-8 right-8 bg-slate-800 p-2 rounded-full'
+            <img 
+              src="/images/typescript.webp"
+              className='absolute bottom-0 shadow-lg  w-12 h-12 right-8 bg-slate-800 p-2 rounded-full'
               alt='typescript'
             />
 
